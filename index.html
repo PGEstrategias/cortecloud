@@ -405,16 +405,36 @@ section { padding: 100px 40px; }
   line-height: 1.65;
 }
 .pain-card .tag-no {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding: 14px 18px;
   background: var(--yellow);
   color: var(--navy);
-  font-size: 0.72rem;
-  font-weight: 800;
+  font-size: 1rem;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  border-radius: 50px;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius);
+  border: 2px solid var(--navy);
+  box-shadow: 4px 4px 0 var(--navy);
+  text-align: center;
+  line-height: 1.2;
+}
+.pain-card .tag-no::before {
+  content: '✕';
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #c0392b;
+  background: var(--white);
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--navy);
 }
 
 /* ─── HOW IT WORKS ─── */
@@ -854,7 +874,6 @@ footer {
   <div class="nav-links">
     <a href="#como-funciona">Cómo Funciona</a>
     <a href="#ventajas">Ventajas</a>
-    <a href="#testimonio">Casos</a>
     <a href="#contacto" class="nav-cta">Quiero Info →</a>
   </div>
 </nav>
@@ -866,7 +885,7 @@ footer {
       <div class="hero-eyebrow">Emprende en mobiliario</div>
       <h1>Fabrica y vende muebles <span class="accent">sin taller propio</span>.</h1>
       <p class="lead">
-        Diseña desde tu celular. Nosotros cortamos, canteamos y mecanizamos con maquinaria CNC industrial. Tú solo ensamblas e instalas. Sin bodega, sin empleados fijos, sin curva de aprendizaje.
+        Diseña desde tu computadora. Nosotros cortamos, canteamos y mecanizamos con maquinaria CNC industrial. Tú solo ensamblas e instalas. Sin bodega, sin empleados fijos, sin curva de aprendizaje.
       </p>
       <div class="hero-cta-group">
         <a href="#contacto" class="btn btn-primary">Agenda tu Asesoría Gratis →</a>
@@ -885,13 +904,6 @@ footer {
           <div class="play-btn">
             <svg width="26" height="26" viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>
           </div>
-        </div>
-      </div>
-      <div class="hero-badge-float">
-        <div class="icon">⚡</div>
-        <div>
-          <strong>Producción 24-72h</strong>
-          <span>Entregado a tu domicilio</span>
         </div>
       </div>
     </div>
@@ -1038,28 +1050,6 @@ footer {
     <div class="stat"><h2>3D</h2><p>RENDERS EN TIEMPO REAL</p></div>
   </div>
 </div>
-
-<!-- TESTIMONIAL -->
-<section class="proof" id="testimonio">
-  <div class="container">
-    <div class="section-head center reveal">
-      <p class="eyebrow">Caso de éxito</p>
-      <h2 class="section-title">Un empresario que ya lo está haciendo</h2>
-    </div>
-    <div class="proof-card reveal">
-      <p class="proof-quote">
-        Con CorteCloud diseño los muebles, mando los cortes a producción y mis colaboradores solo ensamblan e instalan. No requiero que sean carpinteros expertos — cualquier persona con ganas puede hacerlo. La plataforma se encarga de todo: logística, corte, canteado, mecanización… todo llega listo a la puerta.
-      </p>
-      <div class="proof-author">
-        <div class="proof-avatar">CH</div>
-        <div>
-          <div class="proof-name">Equipo Cubiertas y Herrajes</div>
-          <div class="proof-role">Fabricante con modelo de tercerización</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- AUDIENCE -->
 <section class="audience">
