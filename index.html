@@ -656,7 +656,7 @@ section { padding: 100px 40px; }
   text-transform: uppercase;
 }
 
-/* ─── CTA FORM ─── */
+/* ─── CTA ─── */
 .cta {
   background:
     linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
@@ -664,6 +664,7 @@ section { padding: 100px 40px; }
   padding: 100px 40px;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 .cta::before {
   content: '';
@@ -673,114 +674,30 @@ section { padding: 100px 40px; }
   background: radial-gradient(circle, rgba(255,194,41,0.15) 0%, transparent 60%);
   pointer-events: none;
 }
-.cta-wrap {
-  max-width: 1100px;
+.cta-center {
+  max-width: 680px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: center;
   position: relative;
   z-index: 1;
 }
-.cta-wrap .eyebrow { color: var(--yellow); }
-.cta-wrap h2 {
+.cta-center .eyebrow { color: var(--yellow); }
+.cta-center h2 {
   font-size: clamp(1.8rem, 3.4vw, 2.5rem);
   font-weight: 900;
   line-height: 1.15;
   margin-bottom: 18px;
   letter-spacing: -0.02em;
 }
-.cta-wrap > div:first-child p {
+.cta-center p {
   font-size: 1.05rem;
   color: rgba(255,255,255,0.8);
   line-height: 1.7;
+  margin-bottom: 36px;
 }
-.cta-features {
-  margin-top: 28px;
-  list-style: none;
-}
-.cta-features li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 10px 0;
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.9);
-}
-.cta-features li::before {
-  content: '✓';
-  width: 24px; height: 24px;
-  background: var(--yellow);
-  color: var(--navy);
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center; justify-content: center;
-  font-weight: 900;
-  font-size: 0.85rem;
-}
-
-.cta-form {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 40px 36px;
-  box-shadow: var(--shadow-lg);
-}
-.cta-form h3 {
-  color: var(--navy);
-  font-size: 1.25rem;
-  font-weight: 800;
-  margin-bottom: 6px;
-}
-.cta-form > p {
-  color: var(--gray-500);
-  font-size: 0.88rem;
-  margin-bottom: 24px;
-}
-.cta-form label {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--navy);
-  margin-bottom: 6px;
-  margin-top: 14px;
-}
-.cta-form input,
-.cta-form select {
-  width: 100%;
-  padding: 13px 16px;
-  background: var(--off-white);
-  border: 1px solid var(--gray-300);
-  border-radius: var(--radius);
-  color: var(--navy);
-  font-family: var(--font-base);
-  font-size: 0.95rem;
-  outline: none;
-  transition: all 0.2s;
-}
-.cta-form input:focus,
-.cta-form select:focus {
-  border-color: var(--yellow);
-  background: var(--white);
-  box-shadow: 0 0 0 3px rgba(255,194,41,0.2);
-}
-.cta-form .btn {
-  width: 100%;
-  margin-top: 22px;
-  padding: 16px;
-}
-.cta-form .trust {
-  margin-top: 16px;
-  text-align: center;
-  font-size: 0.78rem;
-  color: var(--gray-500);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  line-height: 1.5;
+.cta-trust {
+  margin-top: 20px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
 }
 
 /* ─── FOOTER ─── */
@@ -844,7 +761,6 @@ footer {
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; gap: 48px; }
   .video-frame { margin: 0 auto; }
-  .cta-wrap { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .respaldo-stats { gap: 20px; }
 }
@@ -859,7 +775,6 @@ footer {
   footer { padding: 48px 20px 24px; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .respaldo-card { padding: 40px 28px; }
-  .cta-form { padding: 32px 24px; }
   .hero-cta-group .btn { width: 100%; }
   .respaldo-stats { flex-direction: column; gap: 16px; }
 }
@@ -884,7 +799,7 @@ footer {
   <div class="nav-links">
     <a href="#aprende">Qué vas a aprender</a>
     <a href="#para-quien">Para quién es</a>
-    <a href="#registro" class="nav-cta">Quiero mi lugar →</a>
+    <a href="https://wa.me/522218593655" target="_blank" class="nav-cta">Quiero mi lugar →</a>
   </div>
 </nav>
 
@@ -898,7 +813,7 @@ footer {
         Un taller práctico donde aprendes a usar CorteCloud desde cero — y descubres cómo fabricar muebles profesionales sin maquinaria, sin bodega y sin empleados fijos.
       </p>
       <div class="hero-cta-group">
-        <a href="#registro" class="btn btn-primary">👉 Quiero mi lugar — es gratis</a>
+        <a href="https://wa.me/522218593655" target="_blank" class="btn btn-primary">👉 Quiero mi lugar — es gratis</a>
       </div>
       <div class="hero-trust">
         <span><span class="dot"></span> +192K usuarios</span>
@@ -1124,40 +1039,14 @@ footer {
 
 <!-- REGISTRO -->
 <section class="cta" id="registro">
-  <div class="cta-wrap">
-    <div class="reveal">
-      <p class="eyebrow">Reserva tu lugar</p>
-      <h2>Regístrate y te avisamos cuando haya fecha disponible.</h2>
-      <p>Cupos limitados. Confirmas tu lugar cuando te contactemos.</p>
-      <ul class="cta-features">
-        <li>Taller 100% gratuito</li>
-        <li>Puebla — fecha por confirmar</li>
-        <li>Proceso completo en vivo</li>
-        <li>Sin experiencia previa requerida</li>
-      </ul>
-    </div>
-    <form class="cta-form reveal" onsubmit="return handleSubmit(event)">
-      <h3>Regístrate al taller gratuito</h3>
-      <p>Cupos limitados. Confirmas tu lugar cuando te contactemos.</p>
-
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" placeholder="Tu nombre" required>
-
-      <label for="tel">WhatsApp (10 dígitos)</label>
-      <input type="tel" id="tel" placeholder="5512345678" maxlength="10" required>
-
-      <label for="ocupacion">¿A qué te dedicas?</label>
-      <select id="ocupacion" required>
-        <option value="" disabled selected>Selecciona una opción</option>
-        <option>Carpintero</option>
-        <option>Diseñador o Arquitecto</option>
-        <option>Emprendedor sin experiencia</option>
-        <option>Otro</option>
-      </select>
-
-      <button type="submit" class="btn btn-primary">🟡 QUIERO MI LUGAR — ES GRATIS →</button>
-      <div class="trust">🔒 Tus datos están protegidos · Sin spam · Te contactamos por WhatsApp para confirmar fecha</div>
-    </form>
+  <div class="cta-center reveal">
+    <p class="eyebrow">Reserva tu lugar</p>
+    <h2>Regístrate y te avisamos cuando haya fecha disponible.</h2>
+    <p>Cupos limitados. Confirmas tu lugar cuando te contactemos por WhatsApp.</p>
+    <a href="https://wa.me/522218593655" target="_blank" class="btn btn-primary" style="font-size:1.05rem; padding:18px 40px;">
+      🟡 QUIERO MI LUGAR — ES GRATIS →
+    </a>
+    <div class="cta-trust">🔒 Sin spam · Puebla · Cupos limitados</div>
   </div>
 </section>
 
@@ -1172,7 +1061,7 @@ footer {
       <h5>El taller</h5>
       <a href="#aprende">Qué vas a aprender</a>
       <a href="#para-quien">Para quién es</a>
-      <a href="#registro">Reserva tu lugar</a>
+      <a href="https://wa.me/522218593655" target="_blank">Reserva tu lugar</a>
     </div>
     <div class="footer-col">
       <h5>Marcas</h5>
@@ -1210,16 +1099,6 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 reveals.forEach(el => io.observe(el));
 
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button[type=submit]');
-  btn.textContent = '¡Listo! Te contactaremos por WhatsApp ✓';
-  btn.style.background = '#1a7d4a';
-  btn.style.borderColor = '#1a7d4a';
-  btn.style.color = '#fff';
-  btn.disabled = true;
-  return false;
-}
 </script>
 </body>
 </html>
