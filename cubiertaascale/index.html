@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Labradorite Royal Blue — Ascale Piedra Sinterizada | Cubiertas y Herrajes</title>
-<meta name="description" content="Labradorite Royal Blue de Ascale: piedra sinterizada de gran formato. Alta resistencia, fácil limpieza, dos acabados. Cotiza hoy.">
+<title>Ascale Piedra Sinterizada — Labradorite Royal Blue | Cubiertas y Herrajes Puebla</title>
+<meta name="description" content="Ascale: piedra sinterizada de Grupo Pamesa. Placas 320×160 cm en 3 espesores. 40+ modelos en 9 colecciones. Hecha en España, distribuida en Puebla por Cubiertas y Herrajes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -708,6 +708,109 @@ footer {
 }
 .footer-bottom a { color: var(--copper-soft); text-decoration: none; }
 
+/* ─── HERITAGE ─── */
+.heritage {
+  background: var(--royal-blue);
+  border-top: 1px solid var(--copper);
+  border-bottom: 1px solid var(--copper);
+  padding: 60px 48px;
+}
+.heritage-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.heritage-item {
+  text-align: center;
+  padding: 12px 24px;
+  border-right: 1px solid var(--border);
+}
+.heritage-item:last-child { border-right: none; }
+.heritage-number {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 500;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+.heritage-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--cream);
+  line-height: 1.5;
+}
+
+/* ─── COLLECTIONS ─── */
+.collections {
+  background: var(--midnight);
+  border-top: 1px solid var(--border);
+}
+.collections-head { text-align: center; max-width: 720px; margin: 0 auto 80px; }
+.collections-head .section-eyebrow { justify-content: center; }
+.collections-head .section-eyebrow::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--copper);
+  display: block;
+}
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 60px;
+}
+.collection {
+  background: var(--deep-blue);
+  padding: 38px 32px;
+  transition: background 0.3s;
+  cursor: default;
+}
+.collection:hover { background: var(--royal-blue); }
+.collection-num {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--copper-soft);
+  margin-bottom: 10px;
+  letter-spacing: 0.1em;
+}
+.collection h4 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 8px;
+  letter-spacing: 0.08em;
+}
+.collection p {
+  font-size: 0.82rem;
+  color: var(--off-white);
+  opacity: 0.65;
+  line-height: 1.5;
+}
+.catalog-cta {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid var(--border);
+}
+.catalog-cta-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--off-white);
+  opacity: 0.85;
+  margin-bottom: 28px;
+}
+
 /* ─── REVEAL ─── */
 .reveal { opacity: 0; transform: translateY(40px); transition: all 0.9s cubic-bezier(0.22,1,0.36,1); }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -726,6 +829,10 @@ footer {
   .feature:nth-last-child(-n+2) { border-bottom: none; }
   .finishes-grid { grid-template-columns: 1fr; gap: 32px; }
   .properties-grid { grid-template-columns: repeat(2, 1fr); }
+  .heritage-inner { grid-template-columns: repeat(2, 1fr); gap: 40px 0; }
+  .heritage-item { border-right: none; padding: 16px; }
+  .heritage-item:nth-child(odd) { border-right: 1px solid var(--border); }
+  .collections-grid { grid-template-columns: 1fr 1fr; }
   .specs-inner { gap: 24px; }
   .specs-divider { display: none; }
   .cta { padding: 90px 24px; }
@@ -738,6 +845,9 @@ footer {
   .finish-overlay { padding: 32px 24px; }
   .specs-inner { flex-direction: column; }
   .footer-logo { font-size: 1.5rem; }
+  .heritage { padding: 48px 24px; }
+  .collections-grid { grid-template-columns: 1fr; }
+  .collection { padding: 28px 24px; }
 }
 </style>
 </head>
@@ -745,7 +855,7 @@ footer {
 
 <!-- ANNOUNCEMENT -->
 <div class="announcement">
-  Ascale · <span>Labradorite Royal Blue</span> · Disponible en México
+  Ascale · <span>Quartz Surfaces &amp; Porcelain</span> · Distribuido en México por Cubiertas y Herrajes
 </div>
 
 <!-- NAV -->
@@ -761,15 +871,15 @@ footer {
 <section class="hero">
   <div class="hero-grid">
     <div>
-      <div class="hero-eyebrow">Piedra Sinterizada</div>
+      <div class="hero-eyebrow">Ascale · Piedra Sinterizada</div>
       <h1>Labradorite<span class="royal">Royal Blue</span></h1>
       <p class="hero-tag">La profundidad del azul. La energía de la piedra.</p>
       <p class="hero-lead">
-        Un diseño único que transforma cada espacio en algo extraordinario.
+        Piedra sinterizada de última generación, en placas de 320×160 cm. Belleza atemporal y resistencia natural — sin los límites de los materiales convencionales.
       </p>
       <div class="hero-cta-row">
         <a href="https://wa.me/522218593655" target="_blank" class="btn btn-primary">Solicitar cotización</a>
-        <a href="assets/LISTA_PRECIOS_ASCALE_2026.pdf" target="_blank" class="btn btn-ghost">
+        <a href="assets/CATALOGO_ASCALE.pdf" target="_blank" class="btn btn-ghost">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
           Ver catálogo
         </a>
@@ -832,6 +942,28 @@ footer {
   </div>
 </div>
 
+<!-- HERITAGE -->
+<div class="heritage">
+  <div class="heritage-inner reveal">
+    <div class="heritage-item">
+      <div class="heritage-number">1972</div>
+      <div class="heritage-label">Herencia<br>Grupo Pamesa</div>
+    </div>
+    <div class="heritage-item">
+      <div class="heritage-number">5°</div>
+      <div class="heritage-label">Productor<br>Mundial</div>
+    </div>
+    <div class="heritage-item">
+      <div class="heritage-number">20%</div>
+      <div class="heritage-label">Producción<br>Cerámica España</div>
+    </div>
+    <div class="heritage-item">
+      <div class="heritage-number">EU</div>
+      <div class="heritage-label">Made in<br>Castellón, España</div>
+    </div>
+  </div>
+</div>
+
 <!-- ESSENCE -->
 <section class="essence" id="esencia">
   <div class="container">
@@ -846,10 +978,10 @@ footer {
           Diseño que perdura.
         </h2>
         <p class="section-desc">
-          Cada placa de Labradorite Royal Blue captura la profundidad del cielo nocturno: vetas azules que dialogan con destellos dorados y cobrizos. Una superficie que no se elige por moda, sino por carácter — pensada para espacios donde el detalle define la diferencia.
+          Mediante presión y temperatura, Ascale transforma elementos minerales <strong>100% naturales</strong> en piedra sinterizada — la unión entre lo mejor del diseño y la resistencia de la piedra natural. Cada placa de Labradorite Royal Blue captura la profundidad del cielo nocturno: vetas azules que dialogan con destellos dorados y cobrizos.
         </p>
         <p class="essence-quote">
-          "La profundidad del azul. La energía de la piedra."
+          "Un material polivalente, grande y liviano — la placa de piedra sinterizada de última generación."
         </p>
       </div>
     </div>
@@ -891,10 +1023,10 @@ footer {
 <section class="properties">
   <div class="container">
     <div class="properties-head reveal">
-      <div class="section-eyebrow">Propiedades Técnicas</div>
+      <div class="section-eyebrow">Las 8 Propiedades</div>
       <h2 class="section-title">Hecha para <span class="italic">durar</span>.</h2>
       <p class="section-desc" style="margin: 0 auto;">
-        Cualidades técnicas que respaldan cada milímetro de la superficie.
+        Cualidades técnicas oficiales de Ascale que respaldan cada milímetro de la superficie — desde la cocina hasta la fachada exterior.
       </p>
     </div>
     <div class="properties-grid reveal">
@@ -906,7 +1038,7 @@ footer {
           </svg>
         </div>
         <h4>Alta resistencia</h4>
-        <p>A impactos y rayaduras</p>
+        <p>A choques térmicos, rayos UV y flexión</p>
       </div>
       <div class="property">
         <div class="property-icon">
@@ -916,8 +1048,18 @@ footer {
             <line x1="16" y1="4" x2="20" y2="4"/>
           </svg>
         </div>
-        <h4>Resistente</h4>
-        <p>A altas temperaturas</p>
+        <h4>Altas temperaturas</h4>
+        <p>Ignífugo, incombustible y apto para utensilios calientes</p>
+      </div>
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
+            <circle cx="12" cy="12" r="4"/>
+          </svg>
+        </div>
+        <h4>Resistente a rayos UV</h4>
+        <p>Estabilidad cromática con el paso del tiempo</p>
       </div>
       <div class="property">
         <div class="property-icon">
@@ -925,8 +1067,8 @@ footer {
             <path d="M12 2c-3 5-7 9-7 13a7 7 0 0 0 14 0c0-4-4-8-7-13z"/>
           </svg>
         </div>
-        <h4>Baja absorción</h4>
-        <p>De agua</p>
+        <h4>Impermeable</h4>
+        <p>Menos del 0.08% de absorción de agua</p>
       </div>
       <div class="property">
         <div class="property-icon">
@@ -935,9 +1077,107 @@ footer {
             <line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </div>
-        <h4>Resistente a manchas</h4>
-        <p>Y productos químicos</p>
+        <h4>Antimanchas</h4>
+        <p>Higiénica · resiste agentes químicos y bacterias</p>
       </div>
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M3 17l6-6 4 4 8-8"/>
+            <polyline points="14 7 20 7 20 13"/>
+          </svg>
+        </div>
+        <h4>Resistente al corte</h4>
+        <p>Soporta el uso intensivo de encimera sin rayarse</p>
+      </div>
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9-9-4-9-9z"/>
+            <path d="M3 12h18"/>
+            <path d="M12 3a14 14 0 0 1 0 18"/>
+          </svg>
+        </div>
+        <h4>Bajas temperaturas</h4>
+        <p>Resistente a heladas · apto para exteriores</p>
+      </div>
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M11 20A7 7 0 0 1 4 13c0-5 7-11 7-11s7 6 7 11a7 7 0 0 1-7 7z"/>
+            <path d="M8 13c0-2 1.5-4 3-4"/>
+          </svg>
+        </div>
+        <h4>100% Natural</h4>
+        <p>Mineral puro · 70% de materiales reciclados</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section class="collections" id="colecciones">
+  <div class="container">
+    <div class="collections-head reveal">
+      <div class="section-eyebrow">El Portafolio</div>
+      <h2 class="section-title">9 colecciones. <span class="italic">40+ diseños</span>.</h2>
+      <p class="section-desc" style="margin: 0 auto;">
+        Labradorite Royal Blue es solo una pieza del universo Ascale. Explora todo el catálogo de piedra sinterizada — desde el mármol clásico hasta los metales contemporáneos.
+      </p>
+    </div>
+    <div class="collections-grid reveal">
+      <div class="collection">
+        <div class="collection-num">01 / Luxury</div>
+        <h4>Luxury</h4>
+        <p>Onice, Labradorite, Amazonite, Patagonia — los diseños más exclusivos.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">02 / Marbles</div>
+        <h4>Marbles</h4>
+        <p>18 mármoles: Calacatta, Statuario, Sahara Noir, Taj Mahal y más.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">03 / Stones</div>
+        <h4>Stones</h4>
+        <p>Allure Black, Arizona Sand, Tivoli White y otras piedras nobles.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">04 / Bodytech</div>
+        <h4>Bodytech</h4>
+        <p>Ceppo di Gre, Antalya Sand, Dune Grey, Pierre Bleue.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">05 / Cements</div>
+        <h4>Cements</h4>
+        <p>Cosmopolita en sus tres tonalidades: Gray, Ivory y Silver.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">06 / Natura</div>
+        <h4>Natura</h4>
+        <p>Boreal Sand y Boreal Umber: el calor de la madera.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">07 / Metals</div>
+        <h4>Metals</h4>
+        <p>Millenium Copper y Moma Rusteel: superficies industriales.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">08 / Essentials</div>
+        <h4>Essentials</h4>
+        <p>Alpi White y Grum Black: la pureza de lo monocromático.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">09 / Croma</div>
+        <h4>Croma</h4>
+        <p>5 colores sólidos: White, Gray, Black, Ivory, Silver.</p>
+      </div>
+    </div>
+    <div class="catalog-cta">
+      <p class="catalog-cta-text">Más de 40 modelos en un solo catálogo.</p>
+      <a href="assets/CATALOGO_ASCALE.pdf" target="_blank" class="btn btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+        Descargar catálogo completo
+      </a>
     </div>
   </div>
 </section>
@@ -948,7 +1188,7 @@ footer {
     <div class="spec">
       <div>
         <div class="spec-label">Formato</div>
-        <div class="spec-value">Gran Formato</div>
+        <div class="spec-value">320 × 160 cm</div>
       </div>
     </div>
     <div class="specs-divider"></div>
@@ -961,8 +1201,15 @@ footer {
     <div class="specs-divider"></div>
     <div class="spec">
       <div>
-        <div class="spec-label">Aplicaciones</div>
-        <div class="spec-value">Interiores y Exteriores</div>
+        <div class="spec-label">Aplicación</div>
+        <div class="spec-value">Interior · Exterior</div>
+      </div>
+    </div>
+    <div class="specs-divider"></div>
+    <div class="spec">
+      <div>
+        <div class="spec-label">Origen</div>
+        <div class="spec-value">Made in EU</div>
       </div>
     </div>
   </div>
@@ -972,10 +1219,10 @@ footer {
 <section class="cta">
   <div class="cta-inner reveal">
     <div class="section-eyebrow" style="justify-content:center;">Cotiza con un Experto</div>
-    <h2>Lleva el <span class="italic">Royal Blue</span><br>a tu próximo proyecto.</h2>
-    <p>Cotiza al instante con un asesor de Cubiertas y Herrajes.<br>Atención por WhatsApp · respuesta inmediata.</p>
+    <h2>Lleva el universo <span class="italic">Ascale</span><br>a tu próximo proyecto.</h2>
+    <p>Asesoría técnica, muestras y cotización personalizada.<br>Atención por WhatsApp · respuesta inmediata.</p>
     <a href="https://wa.me/522218593655" target="_blank" class="btn btn-primary">Solicitar cotización por WhatsApp →</a>
-    <div class="cta-microcopy">221 859 3655 · Cubiertas y Herrajes</div>
+    <div class="cta-microcopy">221 859 3655 · Cubiertas y Herrajes · Puebla</div>
   </div>
 </section>
 
@@ -983,14 +1230,14 @@ footer {
 <footer>
   <div class="footer-logo">
     ASCALE
-    <small>Superficies sin Límites</small>
+    <small>Quartz Surfaces &amp; Porcelain</small>
   </div>
   <p class="footer-tag">
-    Labradorite Royal Blue · Piedra sinterizada de gran formato distribuida en México por Cubiertas y Herrajes.
+    Piedra sinterizada por <strong>Grupo Pamesa</strong> · Fabricada en Castellón, España desde 1972 · Distribuida en México por <a href="https://cubiertasyherrajes.com/" target="_blank">Cubiertas y Herrajes</a>.
   </p>
   <div class="footer-line"></div>
   <div class="footer-bottom">
-    © 2026 · Distribuido por <a href="https://cubiertasyherrajes.com/" target="_blank">Cubiertas y Herrajes</a> · Producido por <a href="#">PG Estrategias</a>
+    © 2026 Ascale · WhatsApp <a href="https://wa.me/522218593655" target="_blank">221 859 3655</a> · 19 Poniente 2911, Belisario Domínguez, Puebla · Producido por <a href="#">PG Estrategias</a>
   </div>
 </footer>
 
