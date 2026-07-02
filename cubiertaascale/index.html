@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ascale — Piedra Sinterizada · Superficies sin Límites | Cubiertas y Herrajes Puebla</title>
+<meta name="description" content="Ascale: piedra sinterizada por Grupo Pamesa. Placas 320×160 cm, 3 espesores, 40+ modelos en 9 colecciones. Made in EU, distribuida en Puebla por Cubiertas y Herrajes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Ascale editorial palette */
+  --ink:        #0F0F0E;
+  --graphite:   #2A2A28;
+  --stone:      #7A756C;
+  --pearl:      #E5E0D6;
+  --cream:      #F5F1EA;
+  --bone:       #FAF7F1;
+  --white:      #FFFFFF;
+  --gold:       #B08D57;
+  --gold-soft:  #C9A671;
+  --gold-deep:  #8B6D3F;
+
+  --line:       rgba(15,15,14,0.10);
+  --line-strong:rgba(15,15,14,0.20);
+  --line-dark:  rgba(245,241,234,0.14);
+  --line-dark-strong: rgba(245,241,234,0.28);
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+img { max-width:100%; display:block; }
+
+/* ─── ANNOUNCEMENT ─── */
+.announcement {
+  background: var(--ink);
+  color: var(--cream);
+  text-align: center;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 11px 16px;
+  font-weight: 400;
+}
+.announcement span { color: var(--gold-soft); font-weight: 500; }
+
+/* ─── NAV ─── */
+.nav {
+  background: rgba(15,15,14,0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line-dark);
+  padding: 22px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.nav-logo {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.6rem;
+  letter-spacing: 0.32em;
+  color: var(--cream);
+  text-decoration: none;
+}
+.nav-logo small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.55rem;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  color: var(--gold-soft);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold-soft);
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.nav-cta:hover {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  min-height: 94vh;
+  padding: 90px 48px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--cream);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/img/hero-kitchen.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.55;
+  z-index: 0;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(15,15,14,0.88) 0%, rgba(15,15,14,0.55) 55%, rgba(15,15,14,0.30) 100%),
+    linear-gradient(180deg, rgba(15,15,14,0.35) 0%, rgba(15,15,14,0.75) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: var(--line-dark);
+  z-index: 2;
+}
+.hero-grid {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 72px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: var(--gold-soft);
+  margin-bottom: 32px;
+}
+.hero-eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 5.6rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  color: var(--cream);
+  margin-bottom: 28px;
+}
+.hero h1 .italic {
+  color: var(--gold-soft);
+  font-style: italic;
+  font-weight: 500;
+}
+.hero-tag {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.85;
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line-dark-strong);
+  max-width: 380px;
+}
+.hero-lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.6vw, 1.4rem);
+  color: var(--cream);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.55;
+  max-width: 520px;
+  margin-bottom: 44px;
+  letter-spacing: 0.01em;
+  opacity: 0.9;
+}
+.hero-cta-row { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 38px;
+  font-weight: 500;
+  font-size: 0.78rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+  font-family: var(--font-body);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--cream);
+  border-color: var(--ink);
+}
+.btn-primary:hover {
+  background: var(--gold-deep);
+  border-color: var(--gold-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(15,15,14,0.18);
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+}
+.btn-gold:hover {
+  background: var(--gold-deep);
+  border-color: var(--gold-deep);
+  color: var(--cream);
+  transform: translateY(-2px);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line-strong);
+}
+.btn-ghost:hover {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--cream);
+}
+.hero .btn-primary {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+}
+.hero .btn-primary:hover {
+  background: var(--gold-soft);
+  border-color: var(--gold-soft);
+}
+.hero .btn-ghost {
+  color: var(--cream);
+  border-color: var(--line-dark-strong);
+}
+.hero .btn-ghost:hover {
+  background: var(--cream);
+  color: var(--ink);
+  border-color: var(--cream);
+}
+
+/* Hero video */
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: var(--ink);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow:
+    0 30px 60px rgba(15,15,14,0.14),
+    0 0 0 1px var(--line);
+}
+.video-frame video {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15,15,14,0.45), rgba(15,15,14,0.30));
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.4s;
+}
+.video-overlay.hidden { opacity: 0; pointer-events: none; }
+.play-btn {
+  width: 84px; height: 84px;
+  background: rgba(245,241,234,0.14);
+  border: 1px solid var(--cream);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s;
+}
+.video-frame:hover .play-btn {
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: scale(1.06);
+}
+.play-btn svg { fill: var(--cream); margin-left: 4px; }
+.video-frame:hover .play-btn svg { fill: var(--ink); }
+
+.video-tag {
+  position: absolute;
+  bottom: 16px; left: 16px;
+  background: rgba(15,15,14,0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--line-dark);
+  padding: 8px 16px;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cream);
+  font-weight: 500;
+  z-index: 3;
+}
+.video-featured-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 8px 14px 8px 12px;
+  background: rgba(245,241,234,0.08);
+  border: 1px solid var(--line-dark-strong);
+  color: var(--gold-soft);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+.video-featured-tag::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* ─── SECTIONS ─── */
+section { padding: 130px 48px; position: relative; }
+.container { max-width: 1280px; margin: 0 auto; }
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: var(--gold-deep);
+  margin-bottom: 24px;
+}
+.section-eyebrow::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+.section-title .italic { font-style: italic; color: var(--gold-deep); font-weight: 500; }
+.section-desc {
+  font-size: 1rem;
+  color: var(--graphite);
+  opacity: 0.85;
+  line-height: 1.8;
+  max-width: 580px;
+}
+
+/* Section dark variant */
+.section-dark { background: var(--ink); color: var(--cream); }
+.section-dark .section-title { color: var(--cream); }
+.section-dark .section-title .italic { color: var(--gold-soft); }
+.section-dark .section-desc { color: var(--cream); opacity: 0.75; }
+.section-dark .section-eyebrow { color: var(--gold-soft); }
+.section-dark .section-eyebrow::before { background: var(--gold); }
+
+/* ─── FEATURES STRIP ─── */
+.features {
+  background: var(--bone);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 60px 48px;
+}
+.features-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-right: 1px solid var(--line);
+}
+.feature:last-child { border-right: none; }
+.feature-icon {
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+  color: var(--gold-deep);
+}
+.feature-icon svg { width: 32px; height: 32px; }
+.feature h4 {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+/* ─── HERITAGE ─── */
+.heritage {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 70px 48px;
+}
+.heritage-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.heritage-item {
+  text-align: center;
+  padding: 12px 24px;
+  border-right: 1px solid var(--line-dark);
+}
+.heritage-item:last-child { border-right: none; }
+.heritage-number {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.8vw, 3rem);
+  font-weight: 500;
+  color: var(--gold-soft);
+  line-height: 1;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+.heritage-label {
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--cream);
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* ─── ESSENCE ─── */
+.essence {
+  background: var(--cream);
+}
+.essence-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 80px;
+  align-items: center;
+}
+.essence-img {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(15,15,14,0.16), 0 0 0 1px var(--line);
+}
+.essence-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.essence-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  color: var(--gold-deep);
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line-strong);
+  line-height: 1.5;
+}
+
+/* ─── NOSOTROS ─── */
+.nosotros {
+  background: var(--bone);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.nosotros-head { text-align: center; max-width: 760px; margin: 0 auto 80px; }
+.nosotros-head .section-eyebrow { justify-content: center; }
+.nosotros-head .section-eyebrow::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+.nosotros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.nosotros-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+}
+.nosotros-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 50px rgba(15,15,14,0.10);
+}
+.nosotros-card-img {
+  aspect-ratio: 5/3;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.nosotros-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(15,15,14,0.15) 100%);
+}
+.nosotros-card-body {
+  padding: 40px 36px 40px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.nosotros-card .num {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--gold-deep);
+  letter-spacing: 0.12em;
+  margin-bottom: 18px;
+}
+.nosotros-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 20px;
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+}
+.nosotros-card h3 .italic { font-style: italic; color: var(--gold-deep); }
+.nosotros-card p {
+  font-size: 0.94rem;
+  color: var(--graphite);
+  line-height: 1.75;
+  opacity: 0.88;
+}
+.nosotros-card p + p { margin-top: 14px; }
+.nosotros-card .divider {
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+  margin: 22px 0 20px;
+}
+
+/* ─── FINISHES (dark) ─── */
+.finishes {
+  background: var(--ink);
+  border-top: 1px solid var(--line-dark);
+}
+.finishes-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 80px;
+}
+.finishes-head .section-eyebrow { justify-content: center; color: var(--gold-soft); }
+.finishes-head .section-eyebrow::before { background: var(--gold); }
+.finishes-head .section-eyebrow::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+.finishes-head .section-title { color: var(--cream); }
+.finishes-head .section-title .italic { color: var(--gold-soft); }
+.finishes-head .section-desc { color: var(--cream); opacity: 0.75; }
+.finishes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+.finish {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35), 0 0 0 1px var(--line-dark);
+  transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+.finish:hover { transform: translateY(-8px); }
+.finish-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+.finish:hover .finish-img { transform: scale(1.05); }
+.finish-mate .finish-img {
+  background-image:
+    linear-gradient(180deg, rgba(15,15,14,0.15) 0%, rgba(15,15,14,0.65) 100%),
+    url('assets/img/texture-matt.jpg');
+}
+.finish-pulida .finish-img {
+  background-image:
+    linear-gradient(180deg, rgba(15,15,14,0.15) 0%, rgba(15,15,14,0.65) 100%),
+    url('assets/img/texture-glossy.jpg');
+}
+.finish-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 44px 40px;
+  background: linear-gradient(180deg, transparent 40%, rgba(15,15,14,0.92) 100%);
+  z-index: 2;
+}
+.finish-label {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin-bottom: 14px;
+}
+.finish h3 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+.finish p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--cream);
+  opacity: 0.85;
+  line-height: 1.5;
+  max-width: 320px;
+}
+
+/* ─── PROPERTIES ─── */
+.properties {
+  background: var(--cream);
+}
+.properties-head { text-align: center; max-width: 680px; margin: 0 auto 70px; }
+.properties-head .section-eyebrow { justify-content: center; }
+.properties-head .section-eyebrow::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+.property {
+  background: var(--bone);
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: background 0.3s;
+}
+.property:hover { background: var(--white); }
+.property-icon {
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 28px;
+  color: var(--gold-deep);
+}
+.property-icon svg { width: 28px; height: 28px; }
+.property h4 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.property p {
+  font-size: 0.82rem;
+  color: var(--graphite);
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+/* ─── COLLECTIONS ─── */
+.collections {
+  background: var(--bone);
+  border-top: 1px solid var(--line);
+}
+.collections-head { text-align: center; max-width: 760px; margin: 0 auto 80px; }
+.collections-head .section-eyebrow { justify-content: center; }
+.collections-head .section-eyebrow::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  display: block;
+}
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-bottom: 60px;
+}
+.collection {
+  background: var(--white);
+  padding: 40px 32px;
+  transition: background 0.3s;
+  cursor: default;
+}
+.collection:hover { background: var(--cream); }
+.collection-num {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--gold-deep);
+  margin-bottom: 12px;
+  letter-spacing: 0.1em;
+}
+.collection h4 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 10px;
+  letter-spacing: 0.06em;
+}
+.collection p {
+  font-size: 0.84rem;
+  color: var(--graphite);
+  opacity: 0.75;
+  line-height: 1.55;
+}
+.catalog-cta {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.catalog-cta-text {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--graphite);
+  margin-bottom: 28px;
+}
+
+/* ─── SPECS BAR ─── */
+.specs {
+  background: var(--ink);
+  padding: 40px 48px;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+}
+.specs-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.spec { color: var(--cream); }
+.spec-label {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin-bottom: 6px;
+}
+.spec-value {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.specs-divider {
+  width: 1px;
+  height: 44px;
+  background: var(--line-dark);
+}
+
+/* ─── CTA ─── */
+.cta {
+  background: var(--ink);
+  padding: 140px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/img/hero-kitchen.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.14;
+  pointer-events: none;
+}
+.cta-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.cta .section-eyebrow { justify-content: center; color: var(--gold-soft); }
+.cta .section-eyebrow::before { background: var(--gold); }
+.cta h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--cream);
+  margin-bottom: 28px;
+  letter-spacing: -0.01em;
+}
+.cta h2 .italic { font-style: italic; color: var(--gold-soft); font-weight: 500; }
+.cta p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--cream);
+  opacity: 0.85;
+  margin-bottom: 48px;
+  line-height: 1.5;
+}
+.cta .btn { padding: 22px 56px; font-size: 0.8rem; }
+.cta .btn-primary {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+.cta .btn-primary:hover {
+  background: var(--gold-soft);
+  border-color: var(--gold-soft);
+}
+.cta-microcopy {
+  margin-top: 28px;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.5;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--graphite);
+  border-top: 1px solid var(--line-dark);
+  padding: 60px 48px 30px;
+  text-align: center;
+  color: var(--cream);
+}
+.footer-logo {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  color: var(--cream);
+  margin-bottom: 8px;
+}
+.footer-logo small {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.4em;
+  color: var(--gold-soft);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.footer-tag {
+  font-size: 0.82rem;
+  color: var(--cream);
+  opacity: 0.7;
+  margin: 28px auto 36px;
+  max-width: 520px;
+  line-height: 1.7;
+}
+.footer-tag strong { color: var(--gold-soft); font-weight: 500; }
+.footer-tag a { color: var(--gold-soft); text-decoration: none; }
+.footer-line {
+  width: 60px;
+  height: 1px;
+  background: var(--gold);
+  margin: 32px auto;
+}
+.footer-bottom {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.55;
+}
+.footer-bottom a { color: var(--gold-soft); text-decoration: none; }
+
+/* ─── REVEAL ─── */
+.reveal { opacity: 0; transform: translateY(40px); transition: all 0.9s cubic-bezier(0.22,1,0.36,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 960px) {
+  .nav { padding: 18px 24px; }
+  .hero { padding: 60px 24px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 56px; }
+  section { padding: 90px 24px; }
+  .essence-grid { grid-template-columns: 1fr; gap: 56px; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); gap: 0; }
+  .feature { border-bottom: 1px solid var(--line); padding: 32px; }
+  .feature:nth-child(2n) { border-right: none; }
+  .feature:nth-last-child(-n+2) { border-bottom: none; }
+  .finishes-grid { grid-template-columns: 1fr; gap: 32px; }
+  .properties-grid { grid-template-columns: repeat(2, 1fr); }
+  .heritage { padding: 56px 24px; }
+  .heritage-inner { grid-template-columns: repeat(2, 1fr); gap: 40px 0; }
+  .heritage-item { border-right: none; padding: 16px; }
+  .heritage-item:nth-child(odd) { border-right: 1px solid var(--line-dark); }
+  .nosotros-grid { grid-template-columns: 1fr; gap: 24px; }
+  .collections-grid { grid-template-columns: 1fr 1fr; }
+  .specs-inner { gap: 24px; }
+  .specs-divider { display: none; }
+  .cta { padding: 90px 24px; }
+  footer { padding: 48px 24px 24px; }
+}
+@media (max-width: 540px) {
+  .nav-logo { font-size: 1.3rem; }
+  .nav-cta { padding: 10px 16px; font-size: 0.68rem; }
+  .hero-cta-row .btn { width: 100%; }
+  .finish-overlay { padding: 32px 24px; }
+  .specs-inner { flex-direction: column; }
+  .footer-logo { font-size: 1.5rem; }
+  .heritage { padding: 48px 20px; }
+  .collections-grid { grid-template-columns: 1fr; }
+  .collection { padding: 28px 24px; }
+  .nosotros-card-body { padding: 32px 28px; }
+  .video-featured-tag { font-size: 0.58rem; letter-spacing: 0.22em; }
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="announcement">
+  Ascale · <span>Quartz Surfaces &amp; Porcelain</span> · Distribuido en México por Cubiertas y Herrajes
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    ASCALE
+    <small>Sintered Stone</small>
+  </a>
+  <a href="https://wa.me/522218593655" target="_blank" class="nav-cta">Cotizar →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-eyebrow">Ascale · Piedra Sinterizada</div>
+      <h1>Superficies<br><span class="italic">sin límites</span>.</h1>
+      <p class="hero-tag">Sintered Stone by Grupo Pamesa</p>
+      <p class="hero-lead">
+        Piedra sinterizada de última generación — 100% mineral natural, en placas de 320×160 cm y tres espesores. Ascale reúne lo mejor del diseño con la resistencia de la piedra natural, para revestir la arquitectura sin límites.
+      </p>
+      <div class="hero-cta-row">
+        <a href="https://wa.me/522218593655" target="_blank" class="btn btn-primary">Solicitar cotización</a>
+        <a href="assets/CATALOGO_ASCALE.pdf" target="_blank" class="btn btn-ghost">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+          Ver catálogo
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="video-featured-tag">Featured · Labradorite Royal Blue</div>
+      <div class="video-frame" id="videoWrap">
+        <video id="heroVideo" src="https://res.cloudinary.com/djduba5fd/video/upload/q_auto/f_auto/v1781030254/WhatsApp_Video_2026-05-07_at_6.25.06_PM_1_ueozp2.mp4" playsinline preload="metadata"></video>
+        <div class="video-overlay" id="videoOverlay">
+          <div class="play-btn">
+            <svg width="28" height="28" viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>
+          </div>
+        </div>
+        <span class="video-tag">Ver en movimiento</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<div class="features">
+  <div class="features-grid">
+    <div class="feature">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M12 2L3 7l9 5 9-5-9-5z"/>
+          <path d="M3 12l9 5 9-5"/>
+          <path d="M3 17l9 5 9-5"/>
+        </svg>
+      </div>
+      <h4>Alta Resistencia</h4>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M12 2v6m0 8v6m-10-10h6m8 0h6"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+      <h4>Fácil Limpieza</h4>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/>
+        </svg>
+      </div>
+      <h4>Resistente a Rayos UV</h4>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M11 20A7 7 0 0 1 4 13c0-5 7-11 7-11s7 6 7 11a7 7 0 0 1-7 7z"/>
+          <path d="M8 13c0-2 1.5-4 3-4"/>
+        </svg>
+      </div>
+      <h4>Sostenible</h4>
+    </div>
+  </div>
+</div>
+
+<!-- HERITAGE -->
+<div class="heritage">
+  <div class="heritage-inner reveal">
+    <div class="heritage-item">
+      <div class="heritage-number">1972</div>
+      <div class="heritage-label">Herencia<br>Grupo Pamesa</div>
+    </div>
+    <div class="heritage-item">
+      <div class="heritage-number">5°</div>
+      <div class="heritage-label">Productor<br>Mundial</div>
+    </div>
+    <div class="heritage-item">
+      <div class="heritage-number">20%</div>
+      <div class="heritage-label">Producción<br>Cerámica España</div>
+    </div>
+    <div class="heritage-item">
+      <div class="heritage-number">EU</div>
+      <div class="heritage-label">Made in<br>Castellón, España</div>
+    </div>
+  </div>
+</div>
+
+<!-- ESSENCE -->
+<section class="essence" id="esencia">
+  <div class="container">
+    <div class="essence-grid">
+      <div class="essence-img reveal">
+        <img src="assets/img/essence-bowl.jpg" alt="Piedra sinterizada Ascale">
+      </div>
+      <div class="reveal">
+        <div class="section-eyebrow">¿Por qué Ascale?</div>
+        <h2 class="section-title">
+          Una piel <span class="italic">funcional</span>,<br>
+          bella y atemporal.
+        </h2>
+        <p class="section-desc">
+          Ascale es el resultado de una tecnología revolucionaria que <strong>elimina todos los límites de los materiales convencionales</strong>: la piedra sinterizada. Mediante presión y temperatura, transformamos elementos minerales 100% naturales en superficies que reúnen lo mejor del diseño con la resistencia de la piedra.
+        </p>
+        <p class="essence-quote">
+          "Un material polivalente, grande y liviano — la placa de piedra sinterizada de última generación."
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="nosotros" id="nosotros">
+  <div class="container">
+    <div class="nosotros-head reveal">
+      <div class="section-eyebrow">Nosotros</div>
+      <h2 class="section-title">Detrás de cada placa, una <span class="italic">historia</span>.</h2>
+      <p class="section-desc" style="margin: 0 auto;">
+        Más de cinco décadas de tradición cerámica española, un compromiso ambiental verificado y una convicción social que atraviesa cada superficie que fabricamos.
+      </p>
+    </div>
+    <div class="nosotros-grid reveal">
+      <div class="nosotros-card">
+        <div class="nosotros-card-img" style="background-image:url('assets/img/essence-bowl.jpg')"></div>
+        <div class="nosotros-card-body">
+          <div class="num">01 / Herencia</div>
+          <h3>Grupo Pamesa, <span class="italic">desde 1972</span>.</h3>
+          <div class="divider"></div>
+          <p>
+            Fundado en Castellón hace más de 50 años, Grupo Pamesa es líder cerámico en Europa y <strong>5° productor mundial</strong>, con el 20% de la producción cerámica española.
+          </p>
+          <p>
+            Ascale es su línea de piedra sinterizada de última generación — placas 320×160 cm que llevan la excelencia técnica y estética a un nuevo estándar.
+          </p>
+        </div>
+      </div>
+      <div class="nosotros-card">
+        <div class="nosotros-card-img" style="background-image:url('assets/img/forest.jpg')"></div>
+        <div class="nosotros-card-body">
+          <div class="num">02 / Sostenibilidad</div>
+          <h3>Un futuro que se <span class="italic">construye limpio</span>.</h3>
+          <div class="divider"></div>
+          <p>
+            Declaraciones Ambientales de Producto (DAP) certificadas por <strong>Aenor desde 2014</strong>. Sistema Integrado de Gestión con Ecoembes para recogida y reciclaje.
+          </p>
+          <p>
+            Recuperación y reutilización de agua en cada ciclo, eficiencia energética constante en todas las instalaciones y hasta un <strong>70% de materiales reciclados</strong> en cada placa.
+          </p>
+        </div>
+      </div>
+      <div class="nosotros-card">
+        <div class="nosotros-card-img" style="background-image:url('assets/img/villarreal.jpg')"></div>
+        <div class="nosotros-card-body">
+          <div class="num">03 / Compromiso</div>
+          <h3>Cerámica con <span class="italic">propósito</span>.</h3>
+          <div class="divider"></div>
+          <p>
+            Alianza con la <strong>Fundación Alfonso Roig</strong> y centros ocupacionales para la inclusión laboral de personas con discapacidad — trencadís, enmallado y desarrollo profesional real.
+          </p>
+          <p>
+            Patrocinadores oficiales del <strong>Villarreal C.F.</strong> Compartimos tres valores: excelencia, trabajo en equipo y dedicación.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINISHES -->
+<section class="finishes">
+  <div class="container">
+    <div class="finishes-head reveal">
+      <div class="section-eyebrow">Dos Acabados</div>
+      <h2 class="section-title">Cada acabado, una <span class="italic">atmósfera</span>.</h2>
+      <p class="section-desc" style="margin: 0 auto;">
+        Elige el carácter que tu espacio necesita. Ambos comparten la misma profundidad, la misma resistencia, la misma sofisticación.
+      </p>
+    </div>
+    <div class="finishes-grid">
+      <div class="finish finish-mate reveal">
+        <div class="finish-img"></div>
+        <div class="finish-overlay">
+          <div class="finish-label">Acabado 01</div>
+          <h3>Soft Matt</h3>
+          <p>Textura suave, apariencia natural.</p>
+        </div>
+      </div>
+      <div class="finish finish-pulida reveal">
+        <div class="finish-img"></div>
+        <div class="finish-overlay">
+          <div class="finish-label">Acabado 02</div>
+          <h3>Polished</h3>
+          <p>Brillo profundo, reflejos que realzan el diseño.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section class="properties">
+  <div class="container">
+    <div class="properties-head reveal">
+      <div class="section-eyebrow">Las 8 Propiedades</div>
+      <h2 class="section-title">Hecha para <span class="italic">durar</span>.</h2>
+      <p class="section-desc" style="margin: 0 auto;">
+        Cualidades técnicas oficiales de Ascale que respaldan cada milímetro de la superficie — desde la cocina hasta la fachada exterior.
+      </p>
+    </div>
+    <div class="properties-grid reveal">
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M12 2l9 4v6c0 5-3.5 9-9 10-5.5-1-9-5-9-10V6l9-4z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h4>Alta resistencia</h4>
+        <p>A choques térmicos, rayos UV y flexión</p>
+      </div>
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M14 14V5a2 2 0 0 0-4 0v9a4 4 0 1 0 4 0z"/>
+            <line x1="16" y1="8" x2="20" y2="8"/>
+            <line x1="16" y1="4" x2="20" y2="4"/>
+          </svg>
+        </div>
+        <h4>Altas temperaturas</h4>
+        <p>Ignífugo, incombustible y apto para utensilios calientes</p>
+      </div>
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>
+            <circle cx="12" cy="12" r="4"/>
+          </svg>
+        </div>
+        <h4>Resistente a rayos UV</h4>
+        <p>Estabilidad cromática con el paso del tiempo</p>
+      </div>
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M12 2c-3 5-7 9-7 13a7 7 0 0 0 14 0c0-4-4-8-7-13z"/>
+          </svg>
+        </div>
+        <h4>Impermeable</h4>
+        <p>Menos del 0.08% de absorción de agua</p>
+      </div>
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <circle cx="12" cy="12" r="9"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </div>
+        <h4>Antimanchas</h4>
+        <p>Higiénica · resiste agentes químicos y bacterias</p>
+      </div>
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M3 17l6-6 4 4 8-8"/>
+            <polyline points="14 7 20 7 20 13"/>
+          </svg>
+        </div>
+        <h4>Resistente al corte</h4>
+        <p>Soporta el uso intensivo de encimera sin rayarse</p>
+      </div>
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M3 12c0-5 4-9 9-9s9 4 9 9-4 9-9 9-9-4-9-9z"/>
+            <path d="M3 12h18"/>
+            <path d="M12 3a14 14 0 0 1 0 18"/>
+          </svg>
+        </div>
+        <h4>Bajas temperaturas</h4>
+        <p>Resistente a heladas · apto para exteriores</p>
+      </div>
+      <div class="property">
+        <div class="property-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M11 20A7 7 0 0 1 4 13c0-5 7-11 7-11s7 6 7 11a7 7 0 0 1-7 7z"/>
+            <path d="M8 13c0-2 1.5-4 3-4"/>
+          </svg>
+        </div>
+        <h4>100% Natural</h4>
+        <p>Mineral puro · 70% de materiales reciclados</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTIONS -->
+<section class="collections" id="colecciones">
+  <div class="container">
+    <div class="collections-head reveal">
+      <div class="section-eyebrow">El Portafolio</div>
+      <h2 class="section-title">9 colecciones. <span class="italic">40+ diseños</span>.</h2>
+      <p class="section-desc" style="margin: 0 auto;">
+        Labradorite Royal Blue es solo una pieza del universo Ascale. Explora todo el catálogo — del mármol clásico a los metales contemporáneos.
+      </p>
+    </div>
+    <div class="collections-grid reveal">
+      <div class="collection">
+        <div class="collection-num">01 / Luxury</div>
+        <h4>Luxury</h4>
+        <p>Onice, Labradorite, Amazonite, Patagonia — los diseños más exclusivos.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">02 / Marbles</div>
+        <h4>Marbles</h4>
+        <p>18 mármoles: Calacatta, Statuario, Sahara Noir, Taj Mahal y más.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">03 / Stones</div>
+        <h4>Stones</h4>
+        <p>Allure Black, Arizona Sand, Tivoli White y otras piedras nobles.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">04 / Bodytech</div>
+        <h4>Bodytech</h4>
+        <p>Ceppo di Gre, Antalya Sand, Dune Grey, Pierre Bleue.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">05 / Cements</div>
+        <h4>Cements</h4>
+        <p>Cosmopolita en sus tres tonalidades: Gray, Ivory y Silver.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">06 / Natura</div>
+        <h4>Natura</h4>
+        <p>Boreal Sand y Boreal Umber: el calor de la madera.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">07 / Metals</div>
+        <h4>Metals</h4>
+        <p>Millenium Copper y Moma Rusteel: superficies industriales.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">08 / Essentials</div>
+        <h4>Essentials</h4>
+        <p>Alpi White y Grum Black: la pureza de lo monocromático.</p>
+      </div>
+      <div class="collection">
+        <div class="collection-num">09 / Croma</div>
+        <h4>Croma</h4>
+        <p>5 colores sólidos: White, Gray, Black, Ivory, Silver.</p>
+      </div>
+    </div>
+    <div class="catalog-cta">
+      <p class="catalog-cta-text">Más de 40 modelos en un solo catálogo.</p>
+      <a href="assets/CATALOGO_ASCALE.pdf" target="_blank" class="btn btn-primary">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="13" y2="17"/></svg>
+        Descargar catálogo completo
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SPECS BAR -->
+<div class="specs">
+  <div class="specs-inner">
+    <div class="spec">
+      <div class="spec-label">Formato</div>
+      <div class="spec-value">320 × 160 cm</div>
+    </div>
+    <div class="specs-divider"></div>
+    <div class="spec">
+      <div class="spec-label">Espesores</div>
+      <div class="spec-value">6 · 12 · 20 mm</div>
+    </div>
+    <div class="specs-divider"></div>
+    <div class="spec">
+      <div class="spec-label">Aplicación</div>
+      <div class="spec-value">Interior · Exterior</div>
+    </div>
+    <div class="specs-divider"></div>
+    <div class="spec">
+      <div class="spec-label">Origen</div>
+      <div class="spec-value">Made in EU</div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner reveal">
+    <div class="section-eyebrow">Cotiza con un Experto</div>
+    <h2>Lleva el universo <span class="italic">Ascale</span><br>a tu próximo proyecto.</h2>
+    <p>Asesoría técnica, muestras y cotización personalizada.<br>Atención por WhatsApp · respuesta inmediata.</p>
+    <a href="https://wa.me/522218593655" target="_blank" class="btn btn-primary">Solicitar cotización por WhatsApp →</a>
+    <div class="cta-microcopy">221 859 3655 · Cubiertas y Herrajes · Puebla</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    ASCALE
+    <small>Quartz Surfaces &amp; Porcelain</small>
+  </div>
+  <p class="footer-tag">
+    Piedra sinterizada por <strong>Grupo Pamesa</strong> · Fabricada en Castellón, España desde 1972 · Distribuida en México por <a href="https://cubiertasyherrajes.com/" target="_blank">Cubiertas y Herrajes</a>.
+  </p>
+  <div class="footer-line"></div>
+  <div class="footer-bottom">
+    © 2026 Ascale · WhatsApp <a href="https://wa.me/522218593655" target="_blank">221 859 3655</a> · 19 Poniente 2911, Belisario Domínguez, Puebla · Producido por <a href="#">PG Estrategias</a>
+  </div>
+</footer>
+
+<script>
+const video = document.getElementById('heroVideo');
+const overlay = document.getElementById('videoOverlay');
+const videoWrap = document.getElementById('videoWrap');
+
+videoWrap.addEventListener('click', () => {
+  if (video.paused) { video.play(); overlay.classList.add('hidden'); }
+  else { video.pause(); overlay.classList.remove('hidden'); }
+});
+video.addEventListener('ended', () => overlay.classList.remove('hidden'));
+
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
