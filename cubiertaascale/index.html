@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ascale Piedra Sinterizada — Labradorite Royal Blue | Cubiertas y Herrajes Puebla</title>
-<meta name="description" content="Ascale: piedra sinterizada de Grupo Pamesa. Placas 320×160 cm en 3 espesores. 40+ modelos en 9 colecciones. Hecha en España, distribuida en Puebla por Cubiertas y Herrajes.">
+<title>Ascale — Piedra Sinterizada · Superficies sin Límites | Cubiertas y Herrajes Puebla</title>
+<meta name="description" content="Ascale: piedra sinterizada por Grupo Pamesa. Placas 320×160 cm, 3 espesores, 40+ modelos en 9 colecciones. Made in EU, distribuida en Puebla por Cubiertas y Herrajes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -59,10 +59,10 @@ img { max-width:100%; display:block; }
 
 /* ─── NAV ─── */
 .nav {
-  background: rgba(250,247,241,0.94);
+  background: rgba(15,15,14,0.75);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--line-dark);
   padding: 22px 48px;
   display: flex;
   justify-content: space-between;
@@ -76,7 +76,7 @@ img { max-width:100%; display:block; }
   font-weight: 500;
   font-size: 1.6rem;
   letter-spacing: 0.32em;
-  color: var(--ink);
+  color: var(--cream);
   text-decoration: none;
 }
 .nav-logo small {
@@ -85,7 +85,7 @@ img { max-width:100%; display:block; }
   font-size: 0.55rem;
   font-weight: 400;
   letter-spacing: 0.4em;
-  color: var(--stone);
+  color: var(--gold-soft);
   text-transform: uppercase;
   margin-top: 4px;
 }
@@ -94,8 +94,8 @@ img { max-width:100%; display:block; }
   align-items: center;
   gap: 8px;
   background: transparent;
-  border: 1px solid var(--ink);
-  color: var(--ink);
+  border: 1px solid var(--gold);
+  color: var(--gold-soft);
   text-decoration: none;
   padding: 12px 24px;
   font-size: 0.72rem;
@@ -105,36 +105,47 @@ img { max-width:100%; display:block; }
   transition: all 0.3s;
 }
 .nav-cta:hover {
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--gold);
+  color: var(--ink);
 }
 
 /* ─── HERO ─── */
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 94vh;
   padding: 90px 48px;
   display: flex;
   align-items: center;
   overflow: hidden;
-  background:
-    radial-gradient(ellipse at 80% 20%, rgba(176,141,87,0.10) 0%, transparent 55%),
-    linear-gradient(180deg, var(--cream) 0%, var(--bone) 100%);
+  background: var(--ink);
+  color: var(--cream);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/img/hero-kitchen.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.55;
+  z-index: 0;
 }
 .hero::before {
   content: '';
   position: absolute;
-  right: -180px; top: -180px;
-  width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(176,141,87,0.08) 0%, transparent 65%);
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(15,15,14,0.88) 0%, rgba(15,15,14,0.55) 55%, rgba(15,15,14,0.30) 100%),
+    linear-gradient(180deg, rgba(15,15,14,0.35) 0%, rgba(15,15,14,0.75) 100%);
   pointer-events: none;
+  z-index: 1;
 }
 .hero::after {
   content: '';
   position: absolute;
   left: 0; right: 0; bottom: 0;
   height: 1px;
-  background: var(--line);
+  background: var(--line-dark);
+  z-index: 2;
 }
 .hero-grid {
   max-width: 1280px;
@@ -155,7 +166,7 @@ img { max-width:100%; display:block; }
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.35em;
-  color: var(--gold-deep);
+  color: var(--gold-soft);
   margin-bottom: 32px;
 }
 .hero-eyebrow::before {
@@ -170,12 +181,11 @@ img { max-width:100%; display:block; }
   font-weight: 400;
   line-height: 0.95;
   letter-spacing: -0.01em;
-  color: var(--ink);
+  color: var(--cream);
   margin-bottom: 28px;
 }
-.hero h1 .royal {
-  display: block;
-  color: var(--gold-deep);
+.hero h1 .italic {
+  color: var(--gold-soft);
   font-style: italic;
   font-weight: 500;
 }
@@ -184,22 +194,24 @@ img { max-width:100%; display:block; }
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--stone);
+  color: var(--cream);
+  opacity: 0.85;
   margin-bottom: 28px;
   padding-bottom: 24px;
-  border-bottom: 1px solid var(--line-strong);
-  max-width: 360px;
+  border-bottom: 1px solid var(--line-dark-strong);
+  max-width: 380px;
 }
 .hero-lead {
   font-family: var(--font-display);
   font-size: clamp(1.1rem, 1.6vw, 1.4rem);
-  color: var(--graphite);
+  color: var(--cream);
   font-weight: 300;
   font-style: italic;
-  line-height: 1.5;
-  max-width: 500px;
+  line-height: 1.55;
+  max-width: 520px;
   margin-bottom: 44px;
   letter-spacing: 0.01em;
+  opacity: 0.9;
 }
 .hero-cta-row { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
 
@@ -253,14 +265,23 @@ img { max-width:100%; display:block; }
   background: var(--ink);
   color: var(--cream);
 }
-.btn-ghost-dark {
-  background: transparent;
+.hero .btn-primary {
+  background: var(--gold);
+  color: var(--ink);
+  border-color: var(--gold);
+}
+.hero .btn-primary:hover {
+  background: var(--gold-soft);
+  border-color: var(--gold-soft);
+}
+.hero .btn-ghost {
   color: var(--cream);
   border-color: var(--line-dark-strong);
 }
-.btn-ghost-dark:hover {
-  border-color: var(--gold);
-  color: var(--gold-soft);
+.hero .btn-ghost:hover {
+  background: var(--cream);
+  color: var(--ink);
+  border-color: var(--cream);
 }
 
 /* Hero video */
@@ -320,6 +341,26 @@ img { max-width:100%; display:block; }
   color: var(--cream);
   font-weight: 500;
   z-index: 3;
+}
+.video-featured-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 8px 14px 8px 12px;
+  background: rgba(245,241,234,0.08);
+  border: 1px solid var(--line-dark-strong);
+  color: var(--gold-soft);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+.video-featured-tag::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
 }
 
 /* ─── SECTIONS ─── */
@@ -502,14 +543,33 @@ section { padding: 130px 48px; position: relative; }
 .nosotros-card {
   background: var(--white);
   border: 1px solid var(--line);
-  padding: 48px 40px 44px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
 }
 .nosotros-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 24px 50px rgba(15,15,14,0.10);
+}
+.nosotros-card-img {
+  aspect-ratio: 5/3;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+.nosotros-card-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(15,15,14,0.15) 100%);
+}
+.nosotros-card-body {
+  padding: 40px 36px 40px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .nosotros-card .num {
   font-family: var(--font-display);
@@ -517,7 +577,7 @@ section { padding: 130px 48px; position: relative; }
   font-style: italic;
   color: var(--gold-deep);
   letter-spacing: 0.12em;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 .nosotros-card h3 {
   font-family: var(--font-display);
@@ -590,15 +650,13 @@ section { padding: 130px 48px; position: relative; }
 .finish:hover .finish-img { transform: scale(1.05); }
 .finish-mate .finish-img {
   background-image:
-    linear-gradient(135deg, rgba(15,15,14,0.4), rgba(15,15,14,0.7)),
-    url('https://res.cloudinary.com/djduba5fd/image/upload/q_auto/f_auto/v1781030308/WhatsApp_Image_2026-05-07_at_6.29.20_PM_w6opsq.jpg');
-  filter: contrast(0.95) brightness(0.85) saturate(0.85);
+    linear-gradient(180deg, rgba(15,15,14,0.15) 0%, rgba(15,15,14,0.65) 100%),
+    url('assets/img/texture-matt.jpg');
 }
 .finish-pulida .finish-img {
   background-image:
-    linear-gradient(135deg, rgba(15,15,14,0.30), rgba(15,15,14,0.6)),
-    url('https://res.cloudinary.com/djduba5fd/image/upload/q_auto/f_auto/v1781030308/WhatsApp_Image_2026-05-07_at_6.29.20_PM_w6opsq.jpg');
-  filter: contrast(1.15) brightness(1.05) saturate(1.15);
+    linear-gradient(180deg, rgba(15,15,14,0.15) 0%, rgba(15,15,14,0.65) 100%),
+    url('assets/img/texture-glossy.jpg');
 }
 .finish-overlay {
   position: absolute;
@@ -801,10 +859,10 @@ section { padding: 130px 48px; position: relative; }
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://res.cloudinary.com/djduba5fd/image/upload/q_auto/f_auto/v1781030308/WhatsApp_Image_2026-05-07_at_6.29.20_PM_w6opsq.jpg');
+  background-image: url('assets/img/hero-kitchen.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.08;
+  opacity: 0.14;
   pointer-events: none;
 }
 .cta-inner {
@@ -942,7 +1000,8 @@ footer {
   .heritage { padding: 48px 20px; }
   .collections-grid { grid-template-columns: 1fr; }
   .collection { padding: 28px 24px; }
-  .nosotros-card { padding: 36px 28px; }
+  .nosotros-card-body { padding: 32px 28px; }
+  .video-featured-tag { font-size: 0.58rem; letter-spacing: 0.22em; }
 }
 </style>
 </head>
@@ -964,13 +1023,14 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-bg"></div>
   <div class="hero-grid">
     <div>
       <div class="hero-eyebrow">Ascale · Piedra Sinterizada</div>
-      <h1>Labradorite<span class="royal">Royal Blue</span></h1>
-      <p class="hero-tag">La profundidad del azul. La energía de la piedra.</p>
+      <h1>Superficies<br><span class="italic">sin límites</span>.</h1>
+      <p class="hero-tag">Sintered Stone by Grupo Pamesa</p>
       <p class="hero-lead">
-        Piedra sinterizada de última generación, en placas de 320×160 cm. Belleza atemporal y resistencia natural — sin los límites de los materiales convencionales.
+        Piedra sinterizada de última generación — 100% mineral natural, en placas de 320×160 cm y tres espesores. Ascale reúne lo mejor del diseño con la resistencia de la piedra natural, para revestir la arquitectura sin límites.
       </p>
       <div class="hero-cta-row">
         <a href="https://wa.me/522218593655" target="_blank" class="btn btn-primary">Solicitar cotización</a>
@@ -981,6 +1041,7 @@ footer {
       </div>
     </div>
     <div>
+      <div class="video-featured-tag">Featured · Labradorite Royal Blue</div>
       <div class="video-frame" id="videoWrap">
         <video id="heroVideo" src="https://res.cloudinary.com/djduba5fd/video/upload/q_auto/f_auto/v1781030254/WhatsApp_Video_2026-05-07_at_6.25.06_PM_1_ueozp2.mp4" playsinline preload="metadata"></video>
         <div class="video-overlay" id="videoOverlay">
@@ -1064,16 +1125,16 @@ footer {
   <div class="container">
     <div class="essence-grid">
       <div class="essence-img reveal">
-        <img src="https://res.cloudinary.com/djduba5fd/image/upload/q_auto/f_auto/v1781030308/WhatsApp_Image_2026-05-07_at_6.29.20_PM_w6opsq.jpg" alt="Labradorite Royal Blue">
+        <img src="assets/img/essence-bowl.jpg" alt="Piedra sinterizada Ascale">
       </div>
       <div class="reveal">
-        <div class="section-eyebrow">La Esencia</div>
+        <div class="section-eyebrow">¿Por qué Ascale?</div>
         <h2 class="section-title">
-          Belleza que <span class="italic">impresiona</span>.<br>
-          Diseño que perdura.
+          Una piel <span class="italic">funcional</span>,<br>
+          bella y atemporal.
         </h2>
         <p class="section-desc">
-          Mediante presión y temperatura, Ascale transforma elementos minerales <strong>100% naturales</strong> en piedra sinterizada — la unión entre lo mejor del diseño y la resistencia de la piedra natural. Cada placa de Labradorite Royal Blue captura la profundidad del cielo nocturno: vetas azules que dialogan con destellos dorados y cobrizos.
+          Ascale es el resultado de una tecnología revolucionaria que <strong>elimina todos los límites de los materiales convencionales</strong>: la piedra sinterizada. Mediante presión y temperatura, transformamos elementos minerales 100% naturales en superficies que reúnen lo mejor del diseño con la resistencia de la piedra.
         </p>
         <p class="essence-quote">
           "Un material polivalente, grande y liviano — la placa de piedra sinterizada de última generación."
@@ -1095,37 +1156,46 @@ footer {
     </div>
     <div class="nosotros-grid reveal">
       <div class="nosotros-card">
-        <div class="num">01 / Herencia</div>
-        <h3>Grupo Pamesa, <span class="italic">desde 1972</span>.</h3>
-        <div class="divider"></div>
-        <p>
-          Fundado en Castellón hace más de 50 años, Grupo Pamesa es líder cerámico en Europa y <strong>5° productor mundial</strong>, con el 20% de la producción cerámica española.
-        </p>
-        <p>
-          Ascale es su línea de piedra sinterizada de última generación — placas 320×160 cm que llevan la excelencia técnica y estética a un nuevo estándar.
-        </p>
+        <div class="nosotros-card-img" style="background-image:url('assets/img/essence-bowl.jpg')"></div>
+        <div class="nosotros-card-body">
+          <div class="num">01 / Herencia</div>
+          <h3>Grupo Pamesa, <span class="italic">desde 1972</span>.</h3>
+          <div class="divider"></div>
+          <p>
+            Fundado en Castellón hace más de 50 años, Grupo Pamesa es líder cerámico en Europa y <strong>5° productor mundial</strong>, con el 20% de la producción cerámica española.
+          </p>
+          <p>
+            Ascale es su línea de piedra sinterizada de última generación — placas 320×160 cm que llevan la excelencia técnica y estética a un nuevo estándar.
+          </p>
+        </div>
       </div>
       <div class="nosotros-card">
-        <div class="num">02 / Sostenibilidad</div>
-        <h3>Un futuro que se <span class="italic">construye limpio</span>.</h3>
-        <div class="divider"></div>
-        <p>
-          Declaraciones Ambientales de Producto (DAP) certificadas por <strong>Aenor desde 2014</strong>. Sistema Integrado de Gestión con Ecoembes para recogida y reciclaje.
-        </p>
-        <p>
-          Recuperación y reutilización de agua en cada ciclo, eficiencia energética constante en todas las instalaciones y hasta un <strong>70% de materiales reciclados</strong> en cada placa.
-        </p>
+        <div class="nosotros-card-img" style="background-image:url('assets/img/forest.jpg')"></div>
+        <div class="nosotros-card-body">
+          <div class="num">02 / Sostenibilidad</div>
+          <h3>Un futuro que se <span class="italic">construye limpio</span>.</h3>
+          <div class="divider"></div>
+          <p>
+            Declaraciones Ambientales de Producto (DAP) certificadas por <strong>Aenor desde 2014</strong>. Sistema Integrado de Gestión con Ecoembes para recogida y reciclaje.
+          </p>
+          <p>
+            Recuperación y reutilización de agua en cada ciclo, eficiencia energética constante en todas las instalaciones y hasta un <strong>70% de materiales reciclados</strong> en cada placa.
+          </p>
+        </div>
       </div>
       <div class="nosotros-card">
-        <div class="num">03 / Compromiso</div>
-        <h3>Cerámica con <span class="italic">propósito</span>.</h3>
-        <div class="divider"></div>
-        <p>
-          Alianza con la <strong>Fundación Alfonso Roig</strong> y centros ocupacionales para la inclusión laboral de personas con discapacidad — trencadís, enmallado y desarrollo profesional real.
-        </p>
-        <p>
-          Patrocinadores oficiales del <strong>Villarreal C.F.</strong> Compartimos tres valores: excelencia, trabajo en equipo y dedicación.
-        </p>
+        <div class="nosotros-card-img" style="background-image:url('assets/img/villarreal.jpg')"></div>
+        <div class="nosotros-card-body">
+          <div class="num">03 / Compromiso</div>
+          <h3>Cerámica con <span class="italic">propósito</span>.</h3>
+          <div class="divider"></div>
+          <p>
+            Alianza con la <strong>Fundación Alfonso Roig</strong> y centros ocupacionales para la inclusión laboral de personas con discapacidad — trencadís, enmallado y desarrollo profesional real.
+          </p>
+          <p>
+            Patrocinadores oficiales del <strong>Villarreal C.F.</strong> Compartimos tres valores: excelencia, trabajo en equipo y dedicación.
+          </p>
+        </div>
       </div>
     </div>
   </div>
